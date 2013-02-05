@@ -59,6 +59,9 @@ class Log extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+                    'documents_inbound' => array(self::BELONGS_TOO, 'documents_inbound', 'id'),
+                    'documents_outbound' => array(self::BELONGS_TOO, 'documents_outbound', 'id'),
+                    'scanned_documents' => array(self::BELONGS_TOO, 'scanned_documents', 'id')    
 		);
 	}
 

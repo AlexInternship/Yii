@@ -61,6 +61,7 @@ class DocumentsInbound extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+                    'log' => array(self::HAS_MANY, 'log', 'document_id', 'document_table'),
 		);
 	}
 
@@ -80,6 +81,7 @@ class DocumentsInbound extends CActiveRecord
 			'document_data' => 'Document Data',
 			'status' => 'Status',
 			'sync_date' => 'Sync Date',
+                        'log' => 'log'
 		);
 	}
 
